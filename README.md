@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1) Complete CRUD for Note
+	- Edit
+	- Destroy
 
-Things you may want to cover:
+2) Add Devise
+	- Users Model
+	- Users can only see their notes
 
-* Ruby version
+3) AJAX Forms
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4) Styling
+	- Add Bootstrap
+	- Seperate
