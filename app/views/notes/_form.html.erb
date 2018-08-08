@@ -1,0 +1,7 @@
+<%= form_for :note, url: notes_path do |f| %>	
+<p>Title:</p>
+	<%= f.text_field :title %><br>
+	<p>Description:</p>
+	<%= f.text_area :description, size: "50x25" %><br>
+	<%= f.submit "Create" %>
+<% end %>
