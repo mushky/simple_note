@@ -1,2 +1,5 @@
-<h1>Note#show</h1>
-<p>Find me in app/views/note/show.html.erb</p>
+<p><%= @note.description %></p>
+
+<%= link_to "Back", notes_path %>
+<%= link_to "Edit", edit_note_path(@note) %>
+<%= link_to "Delete", note_path(@note), method: :delete, data: { confirm: "Are you sure?" } %>

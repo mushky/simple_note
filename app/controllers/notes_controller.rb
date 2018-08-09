@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+	before_action :authenticate_user!
+	
   def index
   	@notes = Note.all.order("created_at DESC")
   end
@@ -40,6 +42,8 @@ class NotesController < ApplicationController
   def destroy
   	@note = Note.find(params[:id])
   	@note.destroy
+
+  	redirect_to notes_path
   end
 
   private

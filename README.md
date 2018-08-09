@@ -1,8 +1,8 @@
 # README
 
 1) Complete CRUD for Note
-	- Edit
-	- Destroy
+	- Edit [DONE]
+	- Destroy [DONE]
 
 2) Add Devise
 	- Users Model
@@ -13,3 +13,5 @@
 4) Styling
 	- Add Bootstrap
 	- Seperate
+
+5) Switch DB to postgres
