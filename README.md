@@ -18,4 +18,6 @@
 
 4) AJAX Forms
 
-5) Switch DB to postgres
+5) Switch DB to postgres [DONE]
+
+6) Deploy to Heroku
