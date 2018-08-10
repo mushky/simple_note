@@ -1,8 +1,8 @@
 class NotesController < ApplicationController
-	before_action :authenticate_user!
-	
+	before_action :authenticate_user!, except: [:index, :show]
+  
   def index
-  	@notes = Note.all.order("created_at DESC")
+  	@notes = current_user.notes.all.order("created_at DESC")
   end
 
   def new
@@ -10,7 +10,7 @@ class NotesController < ApplicationController
   end
 
   def show
-  	@note = Note.find(params[:id])
+  	@note = current_user.notes.find(params[:id])
   end
 
   def edit
@@ -22,7 +22,7 @@ class NotesController < ApplicationController
   end
 
   def create
-  	@note = Note.new(note_params)
+  	@note = current_user.notes.new(note_params)
   	if @note.save
   		redirect_to notes_path
   	else
