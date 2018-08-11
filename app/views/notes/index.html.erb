@@ -1,7 +1,10 @@
 <p><%= link_to "Add Note", new_note_path, class: "btn-sm btn-primary" %></p>
 
-
 <% @notes.each do |note| %>
-	<%= link_to note.title, note_path(note)  %><br>
-	<%= note.description %>
+	<div class="card">
+		<div class="card-body">
+			<%= link_to note.title, note_path(note)  %><br>
+			<%= note.description %>
+		</div>
+	</div>
 <% end %>
