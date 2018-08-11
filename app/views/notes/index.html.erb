@@ -1,8 +1,7 @@
-<h1>Simple Note</h1>
+<p><%= link_to "Add Note", new_note_path, class: "btn-sm btn-primary" %></p>
 
-<%= link_to "Add Note", new_note_path %>
 
 <% @notes.each do |note| %>
-	<%= link_to note.title  %><br>
+	<%= link_to note.title, note_path(note)  %><br>
 	<%= note.description %>
 <% end %>
