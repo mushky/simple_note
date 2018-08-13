@@ -14,10 +14,11 @@
 
 3) Styling
 	> Add Bootstrap [DONE]
-	>
+	> Cards class for notes [DONE]
+	> 
 
 4) AJAX Forms
 
 5) Switch DB to postgres [DONE]
 
-6) Deploy to Heroku
+6) Deploy to Heroku [DONE]
