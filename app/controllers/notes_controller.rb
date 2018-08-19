@@ -11,7 +11,6 @@ class NotesController < ApplicationController
 
   def show
   	@note = current_user.notes.find(params[:id])
-    #@note = Note.find(params[:id])
   end
 
   def edit
