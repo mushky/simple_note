@@ -72,4 +72,6 @@ RSpec.configure do |config|
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)  
 end
 
-
+RSpec.configure do |config|
+  config.include Devise::Test::ControllerHelpers, type: :controller
+end
