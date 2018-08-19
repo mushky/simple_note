@@ -1,7 +1,9 @@
 <%= form_for @note do |f| %>	
 	<p>Title:</p>
-	<%= f.text_field :title %><br>
+	<%= f.text_field :title, :class => "tinymce" %><br>
 	<p>Description:</p>
-	<%= f.text_area :description, size: "90x25" %><br>
+	<%= f.text_area :description, size: "90x25", :class => "tinymce" %><br>
 	<%= f.submit "Create" %>
 <% end %>
+
+<%= tinymce %>
