@@ -15,6 +15,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise'
+gem 'tinymce-rails' # WYSWYG Text Editor Library
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'  
