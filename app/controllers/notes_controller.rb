@@ -2,7 +2,7 @@ class NotesController < ApplicationController
 	before_action :authenticate_user!
   
   def index
-  	@notes = current_user.notes.all.order("created_at DESC")
+  	@notes = current_user.notes.all.order("updated_at DESC")
   end
 
   def new
@@ -33,7 +33,7 @@ class NotesController < ApplicationController
   def update
   	@note = current_user.notes.find(params[:id])
   	if @note.update_attributes(note_params)
-  		redirect_to @note
+  		redirect_to notes_path
   	else
   		render 'edit'
   	end

@@ -22,3 +22,11 @@
 5) Switch DB to postgres [DONE]
 
 6) Deploy to Heroku [DONE]
+
+7) Add RSpec for testing [DONE]
+
+8) Order by descending and last updated [DONE]
+
+9) Add Search Functionality
+
+10) Simplify text editor feature
