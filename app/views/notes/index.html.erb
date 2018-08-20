@@ -3,7 +3,7 @@
 <% @notes.each do |note| %>
 	<div class="card">
 		<div class="card-body">
-			<%= link_to note.title, edit_note_path(note)  %><br>
+			<%= link_to note.title, edit_note_path(note) %><br>
 			<%= sanitize note.description %>
 		</div> <!-- /card-body -->
 	</div> <!-- /card -->
