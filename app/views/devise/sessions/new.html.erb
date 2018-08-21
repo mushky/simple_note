@@ -1,26 +1,26 @@
-<h2>Log in</h2>
+<h1>Simple Note</h1>
+<body class="text-center">
+  <form class="form-signin">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-signin") do |f| %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-group">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        
+      <%= f.label :email, class: "sr-only" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
 
-  <div class="form-group">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="form-group">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+      <%= f.label :password, class: "sr-only" %>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
 
-  <div class="form-group">
-    <%= f.submit "Log in", class: "btn btn-primary" %>
-  </div>
-<% end %>
+      <% if devise_mapping.rememberable? -%>
+        <%= f.check_box :remember_me, class: "checkbox mb-3" %>
+        <%= f.label :remember_me, class: "checkbox mb-3" %>
+      <% end -%>
 
+      <%= f.submit "Log in", class: "btn btn-lg btn-primary btn-block" %>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+
+    <% end %>
+  </form>
+</div>
 <%= render "devise/shared/links" %>
