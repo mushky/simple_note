@@ -4,22 +4,22 @@
     <title>SimpleNote</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
   </head>
-
   <body>
     <div class="container">
       <% if user_signed_in? %>
         <%= link_to current_user.email, edit_user_registration_path %> |
         <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+        <%= link_to "Add Note", new_note_path, class: "btn-sm btn-primary add-note" %>
       <% else %>
         <%= link_to "Log in", new_user_session_path %>
       <% end %>
       <% if notice %><div class="alert alert-info"><%= notice %></div> <% end %>
       <% if alert %><div class="alert alert-warning"><%= alert %></div> <% end %>
+      <input type="text" placeholder="Search.." class="search-bar">
       <%= yield %>
     </div>
   </body>

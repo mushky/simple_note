@@ -1,4 +1,3 @@
-<p><%= link_to "Add Note", new_note_path, class: "btn-sm btn-primary" %></p>
 <div class="row">
 	<div class="col-xs-12">
 		<% @notes.each do |note| %>
@@ -6,7 +5,6 @@
 				<div class="card-body">
 					<%= link_to note.title, edit_note_path(note) %><br>
 					<%= sanitize(note.description.truncate(100, separator: '</p>')) %>
-<%#= sanitize(post.content.truncate(580, separator: '</p>')) %>					
 				</div> <!-- /card-body -->
 			</div> <!-- /card -->
 		<% end %>
