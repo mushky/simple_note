@@ -4,11 +4,10 @@
 			<div class="card">
 				<div class="card-body">
 					<%= link_to note.title, edit_note_path(note) %><br>
-					<%= sanitize(note.description.truncate(100, separator: '</p>')) %>
+					<%= markdown(note.description.truncate(100, separator: '</p>')) %>
 				</div> <!-- /card-body -->
 			</div> <!-- /card -->
 		<% end %>
 	</div>
 </div> <!-- /row -->
 
-<%= tinymce %> 
