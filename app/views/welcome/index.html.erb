@@ -1,10 +1,10 @@
-<h1 class="text-center">Simple Note</h1>
+<h1 class="text-center">Donkey Note</h1>
 <% if user_signed_in? %>
 	<%= link_to "Notes", notes_path, class: "btn btn-primary" %>
 <% else %>
 <p>Keep your personal notes in a safe place.</p>
 
-<p>Simple Note is the easiest and quickest way to take notes.</p>
+<p>Donkey Note is the easiest and quickest way to take notes.</p>
 
 <%= link_to "Get Started", notes_path, class: "btn btn-lg btn-primary btn-block" %>
 <% end %>
