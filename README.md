@@ -15,7 +15,7 @@
 3) Styling
 	> Add Bootstrap [DONE]
 	> Cards class for notes [DONE]
-	> 
+	> Navbar
 
 4) AJAX Forms
 
@@ -27,6 +27,7 @@
 
 8) Order by descending and last updated [DONE]
 
-9) Add Search Functionality
+9) Add Search Functionality (Solr or Elastic)
 
-10) Simplify text editor feature
+10) Simplify text editor feature [DONE] -> Switched back to markdown
+
