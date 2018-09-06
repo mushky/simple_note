@@ -1,12 +1,14 @@
 <div class="row">
 	<div class="col-xs-12">
 		<% @notes.each do |note| %>
-			<div class="card">
-				<div class="card-body">
-					<%= link_to note.title, edit_note_path(note) %><br>
-					<%= markdown(note.description.truncate(100, separator: '</p>')) %>
-				</div> <!-- /card-body -->
-			</div> <!-- /card -->
+			<div class="notes">
+				<div class="card card-design">
+					<div class="card-body <%= cycle('even', 'odd') -%>">
+						<%= link_to note.title, edit_note_path(note) %><br>
+						<%= markdown(note.description.truncate(100, separator: '</p>')) %>
+					</div> <!-- /card-body -->
+				</div> <!-- /card -->
+			</div> <!-- /notes -->
 		<% end %>
 	</div>
 </div> <!-- /row -->
