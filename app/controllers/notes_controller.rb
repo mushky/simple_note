@@ -2,7 +2,11 @@ class NotesController < ApplicationController
 	before_action :authenticate_user!
   
   def index
-  	@notes = current_user.notes.all.order("updated_at DESC")
+    if params[:search]
+      @notes = current_user.notes.search(params[:search]).order("updated_at DESC")
+    else
+      @notes = current_user.notes.all.order("updated_at DESC")
+    end
   end
 
   def new
@@ -48,6 +52,6 @@ class NotesController < ApplicationController
 
   private
 	  def note_params
-	    params.require(:note).permit(:title, :description)
+	    params.require(:note).permit(:title, :description, :tags)
 	  end
 end

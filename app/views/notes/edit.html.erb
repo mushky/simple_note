@@ -1,7 +1,5 @@
-
-<br><br><%= link_to "Back", notes_path, class: 'btn-sm btn-info' %><br><br>
-<p><strong>Last Updated: </strong><%= @note.updated_at %></p>
+<p><%= link_to "Back", notes_path, class: 'btn-sm btn-info' %> | <strong>Last Updated: </strong><%= @note.updated_at %> | <em>Tags: <%= @note.tags %></em></p>
 
 <%= render 'form' %>
 
-<br><%= link_to "Back", notes_path, class: 'btn-sm btn-info' %><br>
+<%= link_to "Back", notes_path, class: 'btn-sm btn-info' %>
