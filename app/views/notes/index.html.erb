@@ -2,7 +2,7 @@
 	<div class="col-lg-12">
 		<% @notes.each do |note| %>
 			<div class="notes">
-				<div class="card card-design">
+				<div class="card">
 					<div class="card-body <%= cycle('even-card', 'odd-card') -%>">
 						<%= link_to note.title, edit_note_path(note) %><br>
 						<%= markdown(note.description.truncate(100, separator: '</p>')) %>
