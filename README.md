@@ -15,7 +15,7 @@
 3) Styling
 	> Add Bootstrap [DONE]
 	> Cards class for notes [DONE]
-	> Navbar
+	> Navbar [In Progress]
 
 4) AJAX Forms
 
@@ -31,3 +31,4 @@
 
 10) Simplify text editor feature [DONE] -> Switched back to markdown
 
+11) Look into developing an auto catalogue feature that looks at the title and description and creates tags for indexing
