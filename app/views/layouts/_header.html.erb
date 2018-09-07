@@ -1,14 +1,24 @@
-<% if user_signed_in? %>
-  <%= link_to current_user.email, edit_user_registration_path %> |
-  <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
-  <%= form_tag(notes_path, :method => "get", class: "search-bar") do %>
-	  <em><%= text_field_tag :search, params[:search], placeholder: "Search..." %></em>
-	  <%= submit_tag "Search", :name => nil, class: "btn-sm btn-warning" %>  
-	  <%= link_to "Add Note", new_note_path, class: "btn-sm btn-primary add-note" %>
-  <% end %>
-<% else %>
-  <%= link_to "Log in", new_user_session_path %>
-<% end %>
-
 <% if notice %><div class="alert alert-info"><%= notice %></div> <% end %>
 <% if alert %><div class="alert alert-warning"><%= alert %></div> <% end %>
+
+<% if user_signed_in? %>
+	<ul>
+	  <li>
+	  	<%= link_to "+", new_note_path, class: "btn-lg btn-info add-note" %>
+	  </li>
+	  <li>
+	  	<%= link_to "Log out", destroy_user_session_path, class: "login-button", :method => :delete %>
+	  </li>
+	  <li>
+	  	<%= form_tag(notes_path, :method => "get", class: "search-bar") do %>
+			<em><%= text_field_tag :search, params[:search], placeholder: "Search..." %></em>
+			<%= submit_tag "Search", :name => nil, class: "btn btn-outline-success my-2 my-sm-0"%>
+		<% end %>	
+		</li>
+	</ul>
+	
+	<% else %>
+	<ul>
+  	<li><%= link_to "Log in", new_user_session_path %></li>
+  </ul>
+<% end %>     	

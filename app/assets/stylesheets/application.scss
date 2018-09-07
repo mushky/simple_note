@@ -60,14 +60,15 @@ body {
 }
 /* Everything down to here goes to welcome.scss */
 .add-note {
-	float: right;
-	margin-top: 5px;
+	float:right;
+}
+
+.login-button {
+  float: left;
 }
 
 .search-bar {
-	margin-top: 5px;
-	margin-bottom:5px;
-	margin-left: 5px;
+  text-align:center;
 }
 
 /* Everything here goes into note.scss */
@@ -83,4 +84,17 @@ body {
   //background: #3498db22;
   background: #e67e2222
 
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #555;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
 }

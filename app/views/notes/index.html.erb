@@ -4,8 +4,8 @@
 			<div class="notes">
 				<div class="card">
 					<div class="card-body <%= cycle('even-card', 'odd-card') -%>">
-						<%= link_to note.title, edit_note_path(note) %><br>
-						<%= markdown(note.description.truncate(100, separator: '</p>')) %>
+						<%= link_to note.title, edit_note_path(note) %>
+						<%= markdown(note.description.truncate(40, separator: '<br>')) %>
 					</div> <!-- /card-body -->
 				</div> <!-- /card -->
 			</div> <!-- /notes -->
