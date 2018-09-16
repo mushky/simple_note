@@ -3,10 +3,10 @@
 
 <% if user_signed_in? %>
 	<header>
-	  <%= link_to "Log out", destroy_user_session_path, class: "btn btn-outline-secondary login-button", :method => :delete %>		
+	  <%= link_to "Quit", destroy_user_session_path, class: "btn btn-outline-secondary login-button", :method => :delete %>		
 	  <%= search_form_for @q, html: { class: "search-bar" } do |f| %>
       <%= f.search_field :description_or_title_or_tags_cont, placeholder: "Search..." %>
 		<% end %>
-	  <%= link_to "New Note", new_note_path, class: "btn btn-primary add-note" %>
+	  <%= link_to "+", new_note_path, class: "btn btn-primary add-note" %>
 	 </header>
 <% end %>
