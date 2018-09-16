@@ -1,13 +1,11 @@
 class NotesController < ApplicationController
 	before_action :authenticate_user!
-  
+  before_action :set_search  
+
   def index
-    if params[:search]
-      @notes = current_user.notes.search(params[:search]).order("updated_at DESC")
-    else
-      @notes = current_user.notes.all.order("updated_at DESC")
-    end
-  end
+    @q = current_user.notes.ransack(params[:q])
+    @notes = @q.result(distinct: true).order("updated_at DESC")
+  end    
 
   def new
   	@note = Note.new
@@ -51,6 +49,12 @@ class NotesController < ApplicationController
   end
 
   private
+
+
+    def set_search
+      @q=Note.search(params[:q])
+    end
+
 	  def note_params
 	    params.require(:note).permit(:title, :description, :tags)
 	  end

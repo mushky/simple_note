@@ -17,10 +17,10 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'redcarpet'
 gem 'coderay'
-#gem 'tinymce-rails' # WYSWYG Text Editor Library
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'rspec-rails', '~> 3.7'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.7'  
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'factory_girl_rails', '~> 4.5.0'   
   gem 'capybara', '~> 2.5'  
@@ -35,7 +35,6 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 3.7'
   gem 'faker', '~> 1.6.1'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'capybara', '~> 2.5'

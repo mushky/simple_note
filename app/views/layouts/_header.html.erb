@@ -3,17 +3,13 @@
 
 <% if user_signed_in? %>
 	<ul>
+	  <li><%= link_to "+", new_note_path, class: "btn-lg btn-info add-note" %></li>
+	  <li><%= link_to "Log out", destroy_user_session_path, class: "login-button", :method => :delete %></li>
 	  <li>
-	  	<%= link_to "+", new_note_path, class: "btn-lg btn-info add-note" %>
-	  </li>
-	  <li>
-	  	<%= link_to "Log out", destroy_user_session_path, class: "login-button", :method => :delete %>
-	  </li>
-	  <li>
-	  	<%= form_tag(notes_path, :method => "get", class: "search-bar") do %>
-			<em><%= text_field_tag :search, params[:search], placeholder: "Search..." %></em>
-			<%= submit_tag "Search", :name => nil, class: "btn btn-outline-success my-2 my-sm-0"%>
-		<% end %>	
+	  	<%= search_form_for @q, html: { class: "search-bar" } do |f| %>
+      <%= f.search_field :description_or_title_or_tags_cont, placeholder: "Search...", class: "form-control" %>
+		<% end %>
+
 		</li>
 	</ul>
 	

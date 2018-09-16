@@ -4,11 +4,6 @@ class Note < ApplicationRecord
 
 	validates :description, presence: true
 
-  def self.search(query)
-  	query = query.downcase!
-  	where("tags like ?", "%#{query}%")
-	end
-
 	def downcase_tags
 		self.tags.downcase!
 	end
