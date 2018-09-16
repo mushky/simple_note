@@ -1,8 +1,9 @@
-<p><strong>Last Updated: </strong><%= @note.updated_at %></p>
+<div class="jumbotron">
+	<p><strong>Last Updated: </strong><%= @note.updated_at %></p>
 
-<%= markdown @note.description %>
+	<%= markdown @note.description %>
 
-<%= link_to "Back", notes_path %>
-<%= link_to "Edit", edit_note_path(@note) %>
-<%= link_to "Delete", note_path(@note), method: :delete, data: { confirm: "Are you sure?" } %>
-
+	<%= link_to "Back", notes_path %>
+	<%= link_to "Edit", edit_note_path(@note) %>
+	<%= link_to "Delete", note_path(@note), method: :delete, data: { confirm: "Are you sure?" } %>
+</div>
