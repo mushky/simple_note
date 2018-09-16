@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
+  before_action :set_search   
 	before_action :authenticate_user!
-  before_action :set_search  
 
   def index
     @q = current_user.notes.ransack(params[:q])
@@ -49,10 +49,8 @@ class NotesController < ApplicationController
   end
 
   private
-
-
     def set_search
-      @q=Note.search(params[:q])
+      @q = Note.search(params[:q])
     end
 
 	  def note_params
