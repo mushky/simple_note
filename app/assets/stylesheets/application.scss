@@ -59,17 +59,39 @@ body {
   border-top-right-radius: 0;
 }
 /* Everything down to here goes to welcome.scss */
+header {
+  position: relative;
+  height: 100%;
+  padding-top: 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-color: #e67e2222;
+}
+
 .add-note {
 	float:right;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-top: 0px;
+  text-align:left;
+  display:inline
 }
 
 .login-button {
   float: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-top: 0px;
+  text-align:left;
+  display:inline
 }
 
 .search-bar {
-  text-align:center;
-  
+  text-align: center;
+  position: relative;
+  margin-bottom: 5px;
+  display:inline;
 }
 
 /* Everything here goes into note.scss */

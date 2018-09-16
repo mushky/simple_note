@@ -2,13 +2,11 @@
 <% if alert %><div class="alert alert-warning"><%= alert %></div> <% end %>
 
 <% if user_signed_in? %>
-	<ul>
-	  <li><%= link_to "New Note", new_note_path, class: "btn btn-primary add-note" %></li>
-	  <li><%= link_to "Log out", destroy_user_session_path, class: "btn btn-outline-secondary", :method => :delete %></li>
-	  <li>
-	  	<%= search_form_for @q, html: { class: "search-bar" } do |f| %>
-      <%= f.search_field :description_or_title_or_tags_cont, placeholder: "Search...", class: "form-control" %>
+	<header>
+	  <%= link_to "Log out", destroy_user_session_path, class: "btn btn-outline-secondary login-button", :method => :delete %>		
+	  <%= search_form_for @q, html: { class: "search-bar" } do |f| %>
+      <%= f.search_field :description_or_title_or_tags_cont, placeholder: "Search..." %>
 		<% end %>
-		</li>
-	</ul>
+	  <%= link_to "New Note", new_note_path, class: "btn btn-primary add-note" %>
+	 </header>
 <% end %>
