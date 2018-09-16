@@ -1,5 +1,8 @@
+<h1>Notes</h1>
 <%= render 'layouts/header' %>
-
+<%= search_form_for @q, html: { class: "search-bar" } do |f| %>
+  <%= f.search_field :description_or_title_or_tags_cont, placeholder: "Search..." %>
+<% end %>
 <div class="row">
 	<div class="col-lg-12">
 		<% @notes.each do |note| %>
