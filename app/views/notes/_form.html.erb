@@ -1,6 +1,6 @@
 <%= form_for @note do |f| %>	
-	<p><%= f.text_field :title, class: "title-area", placeholder: "Title..." %></p>
-	<p><%= f.text_area :description, size: "50x15", class: "text-area", placeholder: "Write note here..." %></p>
-	<%= f.text_field :tags, class: "tag-area", placeholder: "tags..." %><br><br>
+	<p><%= f.text_field :title, class: "title-area form-control", placeholder: "Title..." %></p>
+	<p><%= f.text_area :description, size: "50x15", class: "text-area form-control", placeholder: "Write note here..." %></p>
+	<%= f.text_field :tags, class: "tag-area form-control", placeholder: "tags..." %><br><br>
 	<%= f.submit  "Save", class: "btn btn-primary" %>
 <% end %>
