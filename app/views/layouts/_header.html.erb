@@ -1,0 +1,10 @@
+<h1>Donkey Note</h1>
+<% if notice %><div class="alert alert-info"><%= notice %></div> <% end %>
+<% if alert %><div class="alert alert-warning"><%= alert %></div> <% end %>
+
+<% if user_signed_in? %>
+	<header>
+	  <%= link_to "Log out", destroy_user_session_path, class: "btn-sm btn-outline-secondary login-button", :method => :delete %>		
+	  <%= link_to "Add Note", new_note_path, class: "btn btn-primary add-note" %>
+	</header>
+<% end %>
