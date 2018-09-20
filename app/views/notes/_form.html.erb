@@ -3,7 +3,9 @@
 	<p><%= f.text_area :description, size: "50x15", class: "text-area form-control", placeholder: "Write note here..." %></p>
 	<%= f.text_field :tags, class: "tag-area form-control", placeholder: "tags..." %><br>
 	
-	<%= link_to "Back", notes_path %><br><br>	
 	
 	<%= f.submit  "Save", class: "btn btn-primary" %><br><br>
+
+	<%= link_to "Back", notes_path %><br><br>	
+	
 <% end %>
