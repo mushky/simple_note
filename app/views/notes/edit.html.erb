@@ -1,7 +1,7 @@
 <h1>Edit Note</h1>
 
 <%= link_to "All Notes", notes_path, class: 'btn btn-outline-primary' %>
-<strong>Last Updated: </strong><%= @note.updated_at %> | <em>Tags: <%= @note.tags %></em></p>
+<strong>Last Updated: </strong><%= @note.updated_at %>
 
 <%= render 'form' %>
 
