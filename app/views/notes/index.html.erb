@@ -1,4 +1,4 @@
-<%= render 'layouts/header' %>
+<%= render 'shared/header' %>
 <%= search_form_for @q, html: { class: "search-bar" } do |f| %>
   <%= f.search_field :description_or_title_or_tags_cont, placeholder: "Search..." %>
 <% end %>
