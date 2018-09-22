@@ -101,12 +101,13 @@ header {
 
 .even-card {
   //background: #95b59b22;
-  background: #f1c40f22
+  background: #f1c40f22;
+  font-family: 'Monaco', courier, monospace;
 }
 .odd-card {
   //background: #3498db22;
-  background: #e67e2222
-
+  background: #e67e2222;
+  font-family: 'Monaco', courier, monospace;  
 }
 ul {
   list-style-type: none;
