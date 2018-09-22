@@ -18,6 +18,7 @@
 	> Navbar [In Progress]
 
 4) AJAX Forms
+	> Have Show and Edit Note on the same page
 
 5) Switch DB to postgres [DONE]
 
@@ -27,8 +28,8 @@
 
 8) Order by descending and last updated [DONE]
 
-9) Add Search Functionality (Solr or Elastic)
+9) Add Ransack Search [DONE]
 
 10) Simplify text editor feature [DONE] -> Switched back to markdown
 
-11) Look into developing an auto catalogue feature that looks at the title and description and creates tags for indexing
+11) Develop an auto catalogue feature that looks at the title and description and catalogues notes into categories
