@@ -97,13 +97,13 @@ header {
 /* Everything here goes into note.scss */
 .even-card {
   //background: #95b59b22;
-  background: #F8ECC270;
+  background: #F8ECC2FF;  
   font-family: "Monaco", courier, monospace;
   font-size: 16px;
 }
 .odd-card {
   //background: #3498db22;
-  background: #F8ECC2FF;
+  background: #F8ECC270;
   font-family: "Monaco", courier, monospace;
   font-size: 16px;  
 }
@@ -160,4 +160,6 @@ ul {
   background-color: #F8ECC2;
   margin-top: 10px;
   font-family: 'Monaco', courier, monospace;
+  height: auto;
+  width: auto;
 }
