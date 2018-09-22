@@ -87,11 +87,11 @@ header {
 }
 
 .search-bar {
-  text-align: center;
   position: relative;
   margin-bottom: 5px;
   display: block;
   width: 100%;
+  border-radius: 5px;
 }
 
 /* Everything here goes into note.scss */
@@ -102,12 +102,14 @@ header {
 .even-card {
   //background: #95b59b22;
   background: #f1c40f22;
-  font-family: 'Monaco', courier, monospace;
+  font-family: "Monaco", courier, monospace;
+  font-size: 16px;
 }
 .odd-card {
   //background: #3498db22;
   background: #e67e2222;
-  font-family: 'Monaco', courier, monospace;  
+  font-family: "Monaco", courier, monospace;
+  font-size: 16px;  
 }
 ul {
   list-style-type: none;
