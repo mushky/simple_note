@@ -1,11 +1,11 @@
-<%= form_for @note do |f| %>	
+<%= form_with model: @note do |f| %>	
 	<p><%= f.text_field :title, class: "title-area form-control", placeholder: "Title..." %></p>
 	<p><%= f.text_area :description, size: "50x15", class: "text-area form-control", placeholder: "Write note here..." %></p>
 	<%= f.text_field :tags, class: "tag-area form-control", placeholder: "tags..." %><br>
 	
 	
-	<%= f.submit  "Save", class: "btn btn-primary" %><br><br>
+	<%= f.submit  "Save", class: "btn btn-primary float-left" %>
 
-	<%= link_to "Back", notes_path %><br><br>	
+	<%= link_to "Back", notes_path, class: "float-right" %><br><br>	
 	
 <% end %>

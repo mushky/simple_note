@@ -1,15 +1,19 @@
-<div class="text-center">
-	<div class="jumbotron">
-		<h1>Donkey Note</h1>
+<div class="jumbotron welcome">
+	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+	  <header class="masthead mb-auto">
+	  </header>
 
+	  <main role="main" class="inner cover text-center">
+	    <h1 class="cover-heading">Donkey Note<h1>
+	    <p class="lead">Donkey Note is the easiest and quickest way to take notes</p>
+	    <p class="lead">
 		<% if user_signed_in? %>
 			<%= link_to "Notes", notes_path, class: "btn btn-primary" %>
 		<% else %>
-		<p>Keep your personal notes in a safe place.</p>
-
-		<p>Donkey Note is the easiest and quickest way to take notes.</p>
 
 		<%= link_to "Get Started", notes_path, class: "btn btn-lg btn-primary" %>
 		<% end %>
+	    </p>
+	  </main>
 	</div>
 </div>

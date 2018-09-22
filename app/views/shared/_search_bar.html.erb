@@ -1,0 +1,3 @@
+<%= search_form_for @q, html: { class: "search-bar" } do |f| %>
+  <%= f.search_field :description_or_title_or_tags_cont, class: "search-bar form-control", placeholder: "Search Notes..." %>
+<% end %>

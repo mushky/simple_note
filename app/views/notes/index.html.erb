@@ -1,7 +1,6 @@
 <%= render 'shared/header' %>
-<%= search_form_for @q, html: { class: "search-bar" } do |f| %>
-  <%= f.search_field :description_or_title_or_tags_cont, class: "search-bar form-control", placeholder: "Search..." %>
-<% end %>
+<%= render 'shared/search_bar' %>
+
 <div class="row">
 	<div class="col-lg-12">
 		<% @notes.each do |note| %>
@@ -9,11 +8,10 @@
 				<div class="card">
 					<div class="card-body <%= cycle('even-card', 'odd-card') -%>">
 						<%= link_to note.title, note_path(note) %>
-						<%= markdown(note.description.truncate(200, separator: '</p>')) %>
+						<%= markdown(note.description.truncate(200, separator: '\n')) %>
 					</div> <!-- /card-body -->
 				</div> <!-- /card -->
 			</div> <!-- /notes -->
 		<% end %>
 	</div>
 </div> <!-- /row -->
-

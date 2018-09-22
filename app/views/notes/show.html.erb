@@ -1,6 +1,7 @@
 <div class="jumbotron note-page" >
 	<p><strong>Last Update:</strong> <%= format_date @note.updated_at %>	
-	<%= link_to "Edit", edit_note_path(@note), class: "float-right" %></p>
+	
+	<span id="edit-note"><%= link_to "Edit", edit_note_path(@note), class: "float-right" %></p></span>
 
 	<%= markdown @note.description %>
 

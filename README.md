@@ -19,6 +19,7 @@
 
 4) AJAX Forms
 	> Have Show and Edit Note on the same page
+	> https://stackoverflow.com/questions/13850035/add-and-edit-forms-on-same-page-in-rails
 
 5) Switch DB to postgres [DONE]
 
