@@ -36,8 +36,6 @@ end
 
 group :test do
   gem 'faker', '~> 1.6.1'
-  gem 'factory_girl_rails', '~> 4.5.0'
-  gem 'capybara', '~> 2.5'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'shoulda-matchers', '~> 3.0', require: false
