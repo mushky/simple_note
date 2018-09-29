@@ -4,7 +4,7 @@ class NotesController < ApplicationController
 
   def index
     @q = current_user.notes.ransack(params[:q])
-    @notes = @q.result(distinct: true).order("updated_at DESC")
+    @notes = @q.result(distinct: true).order("updated_at DESC")    
   end    
 
   def new
