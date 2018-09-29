@@ -19,6 +19,7 @@ gem 'redcarpet'
 gem 'coderay'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'rspec-rails', '~> 3.7'
+gem 'pagy'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
